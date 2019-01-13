@@ -9,7 +9,7 @@ myfile.runContents()
 
 function shouldContinue() {
   // Check one: Any pending setTimeout, setInterval, setImmediate?
-  // Check two: Any pending OS tasks? (like server listing to post)
+  // Check two: Any pending OS (network) tasks? (like server listing to post)
   // Check three: Any pending long running operations (like fs module)
   return pendingTimers.length || pendingTimers.length || pendingOperations.length //will return true if arrays are not empty
 }
